@@ -1,0 +1,23 @@
+thead {
+    text-transform: uppercase;
+}
+
+a {
+    color: green;
+}
+
+.top {
+    /* the red gold color #ECAA4D*/
+    background-color: #ECAA4D;
+}
+
+em {
+    background-color: blue;
+    color: white;
+}
+
+#the_most_important {
+    text-transform: capitalize;
+    background-color: gold;
+    color: black;
+}
