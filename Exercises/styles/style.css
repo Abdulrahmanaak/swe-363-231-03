@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html {
+    font-size: 10px;
+    width: 320px;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+    background: var(--slate-900, #0F172A);
+    color: #F8FAFC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
+
+nav li a {
+    color: #F8FAFC;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+nav {
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    padding: 1rem;
+    width: 100%;
+}
+
+header h1 {
+    background: var(--Gradient, linear-gradient(270deg, #22D3EE 50%, #0EA5E9 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+}
+
+section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+section p {
+    font-size: 1em;
+    font-weight: 500;
+}
+
+p em {
+    background: linear-gradient(270deg, #22D3EE 13.04%, #0EA5E9 25.67%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section header {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    align-self: flex-start;
+    background: #F8FAFC;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section header h1 span {
+    background: var(--Gradient, linear-gradient(270deg, #22D3EE 50%, #0EA5E9 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#projects div {
+    display: inline-flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    border-radius: 20px;
+    background: rgba(30, 41, 59, 0.40);
+}
+
+#projects div img {
+    width: 50px;
+}
+
+#projects div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    padding: 0;
+}
+
+#projects div div h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+#projects div div #WebDesign {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(16, 185, 129, 0.20) 0%, rgba(190, 242, 100, 0.20) 100%);
+}
+
+#projects div div #WebDesign h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    background: var(--gradient-green, linear-gradient(180deg, #10B981 0%, #BEF264 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#projects div p {
+    margin: 0;
+}
+
+#projects div div #Next {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(220, 38, 38, 0.20) 0%, rgba(249, 115, 22, 0.20) 100%);
+
+}
+
+#projects div div #Next h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    background: var(--gradient-red, linear-gradient(180deg, #DC2626 0%, #F97316 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#projects div div #Awesome {
+    display: flex;
+    padding: 8px;
+    align-items: flex-start;
+    border-radius: 10px;
+    background: linear-gradient(180deg, rgba(124, 58, 237, 0.20) 0%, rgba(96, 165, 250, 0.20) 100%);
+}
+
+#projects div div #Awesome h3 {
+    font-weight: 700;
+    font-size: 1rem;
+    margin: 0;
+    background: var(--gradient-purple, linear-gradient(180deg, #7C3AED 0%, #60A5FA 100%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+section header h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+#posts div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 18px; */
+    border-radius: 20px;
+    background: var(--slate-800, #1E293B);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    margin: 15px 45px;
+}
+
+#posts div img {
+    width: 230px;
+    flex-shrink: 0;
+    border-radius: 20px 20px 0px 0px;
+}
+
+#posts div h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#posts div h2+p {
+    color: var(--gray-400, #9CA3AF);
+}
+
+#posts div p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+#Subscribe header {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#Subscribe div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    width: 280px;
+    height: 37.548px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: var(--slate-800, #1E293B);
+}
+
+#Subscribe div p {
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+#Subscribe div div {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    height: 28.049px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: var(--Gradient, linear-gradient(270deg, #22D3EE 50%, #0EA5E9 100%));
+    color: var(--slate-800, #1E293B);
+    font-weight: 700;
+    margin-right: 6px;
+}
+
+footer {
+    border-top: 1px solid #CBD5E1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+    gap: 5px;
+}
