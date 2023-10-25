@@ -31,19 +31,53 @@ a {
     text-decoration: none;
 }
 
-nav ul {
-    display: flex;
-    padding: 0;
+header img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-nav li {
+nav ul {
+    padding-inline-start: 0;
+}
+
+nav ul * {
     display: inline;
-    font-size: 1rem;
-    margin: 0 0.5rem;
+    margin-right: 4px;
+}
+
+nav ul li a {
+    color: var(--slate-900, #0F172A);
+    transition: color 0.2s
+}
+
+nav ul li:nth-child(2) a {
+    transition-delay: 0.1s;
+}
+
+nav ul li:nth-child(3) a {
+    transition-delay: 0.2s;
+}
+
+nav ul li:nth-child(4) a {
+    transition-delay: 0.3s;
+}
+
+nav ul li:nth-child(5) a {
+    transition-delay: 0.4s;
+}
+
+nav ul li:nth-child(6) a {
+    transition-delay: 0.5s;
+}
+
+
+nav ul:hover li a {
+    color: #F8FAFC;
 }
 
 nav li a {
-    color: #F8FAFC;
+    color: var(--slate-900, #0F172A);
     text-decoration: none;
     font-size: 1rem;
     font-weight: 700;
@@ -51,10 +85,13 @@ nav li a {
 
 nav {
     gap: 1rem;
+    display: flex;
+    align-self: flex-start;
 }
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     align-content: space-between;
@@ -260,10 +297,11 @@ section header h2 {
     gap: 1rem;
 }
 
-#Subscribe div {
+#Subscribe div form {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     gap: 1rem;
     width: 100%;
     width: 280px;
@@ -273,23 +311,40 @@ section header h2 {
     background: var(--slate-800, #1E293B);
 }
 
-#Subscribe div p {
+#Subscribe div #email {
     font-weight: 400;
-    margin-left: 20px;
+    margin: 0 20px;
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    width: 150px;
+    flex: 1 1;
+    color: #F8FAFC;
+
 }
 
-#Subscribe div div {
-    display: flex;
-    justify-content: center;
+#email::placeholder {
+    color: #F8FAFC;
+}
+
+#Subscribe div input[type="submit"] {
     width: 80px;
     height: 28.049px;
-    flex-shrink: 0;
     border-radius: 30px;
     background: var(--Gradient, linear-gradient(270deg, #22D3EE 50%, #0EA5E9 100%));
     color: var(--slate-800, #1E293B);
+    font-size: 1rem;
     font-weight: 700;
-    margin-right: 6px;
+    border: none;
+    cursor: pointer;
+    margin: 0 6px;
 }
+
+#Subscribe div input[type="submit"]:hover {
+    background: #F8FAFC;
+    transition: all 0.7s ease 0.15s;
+}
+
 
 footer {
     border-top: 1px solid #CBD5E1;
