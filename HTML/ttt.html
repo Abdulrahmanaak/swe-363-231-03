@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .cell {
+            font-family: monospace;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: gray;
+            width: 100px;
+            height: 100px;
+            border: 5px solid white;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .cell:hover {
+            background-color: lightgray;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: larger;
+            font-weight: bolder;
+            background-color: lightslategray;
+            border: 1px solid white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="turn">
+        Now it's is <span>X</span> turn
+    </h1>
+    <!-- Board -->
+    <div class="board">
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+        <div class="row">
+            <div class="cell"></div>
+            <div class="cell"></div>
+            <div class="cell"></div>
+        </div>
+    </div>
+    <button class="restart">Restart</button>
+    <script>
+
+        // decided which turn is it
+        let turn = "X"
+        let gameEnded = false
+        let counter = 0
+        let title = document.querySelector("#turn")
+        let cells = document.getElementsByClassName("cell")
+
+
+        // when we click on a cell add the letter 
+        let board = document.getElementsByClassName("board")[0]
+        board.addEventListener("click", cellClicked)
+
+        function cellClicked(event) {
+            let cell = event.target
+
+            if (cell.innerText === "") {
+                // assiging a letter to the cell
+                cell.innerText = turn
+                cell.style.background = turn === "X" ? "red" : "lightblue"
+
+                // increase the counter to check if the game ended
+                counter++
+                whoWin(board)
+
+                // change turn
+                turn = turn === "X" ? "O" : "X"
+
+                if (!gameEnded) {
+                    //change title
+                    turnLetter = document.querySelector("#turn span")
+                    turnLetter.innerText = turn
+
+                }
+            }
+            else {
+                alert("This cell is already taken")
+            }
+        }
+
+        // check if there is a winner
+        function whoWin(board) {
+            cell1 = cells[0].innerText
+            cell2 = cells[1].innerText
+            cell3 = cells[2].innerText
+            cell4 = cells[3].innerText
+            cell5 = cells[4].innerText
+            cell6 = cells[5].innerText
+            cell7 = cells[6].innerText
+            cell8 = cells[7].innerText
+            cell9 = cells[8].innerText
+
+            if (((cell1 === cell2 && cell2 === cell3 && cell1 !== "") ||
+                (cell4 === cell5 && cell5 === cell6 && cell4 !== "") ||
+                (cell7 === cell8 && cell8 === cell9 && cell7 !== "") ||
+                (cell1 === cell4 && cell4 === cell7 && cell1 !== "") ||
+                (cell2 === cell5 && cell5 === cell8 && cell2 !== "") ||
+                (cell3 === cell6 && cell6 === cell9 && cell3 !== "") ||
+                (cell1 === cell5 && cell5 === cell9 && cell1 !== "") ||
+                (cell3 === cell5 && cell5 === cell7 && cell3 !== "")) && !gameEnded) {
+                title.innerText = "The winner is " + turn
+                gameEnded = true
+            }
+            else if (counter === 9 && !gameEnded) {
+                title.innerText = "It's a tie"
+            }
+        }
+
+        // restart button
+        let button = document.getElementsByClassName("restart")[0]
+        button.addEventListener("click", restart)
+
+        // refreash the page
+        function restart(event) {
+            location.reload()
+        }
+
+    </script>
+    </div>
+</body>
+
+</html>

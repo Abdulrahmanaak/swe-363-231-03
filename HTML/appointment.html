@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<!-- head of the page -->
+
+<head>
+    <title>Appointment</title>
+    <link rel="stylesheet" href="/Exercises/styles/CSS2.css">
+
+</head>
+
+<!-- body of the page -->
+
+<body>
+    <header>
+        <!-- navigator bar -->
+        <nav>
+            <ul>
+                <!-- navigator -->
+                <li><a href="index.html">Main</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="">Appointment</a></li>
+                <li><a href="/Additional Pages/horses.html">Horses</a></li>
+            </ul>
+        </nav>
+        <h1>Let's meet :)</h1>
+    </header>
+    <main>
+        <!-- Appointment form -->
+        <form action="confirmation.html">
+            <fieldset>
+                <legend>Your information</legend>
+                <div>
+                    <label for="name">your nice name:</label>
+                    <input type="text" id="name" placeholder="ex: Ahmed Amin" required="true" autocomplete="name">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Place, Date & time</legend>
+                <div>
+                    <label for="placeChoice">Where do you want to make our meeting?</label>
+                    <input list="place" id="placeChoice" name="placeChoice" required="true">
+                    <datalist id="place">
+                        <option value="Coffee shop"></option>
+                        <option value="Park"></option>
+                        <option value="Office"></option>
+                        <option value="Home"></option>
+                        <option value="Anywhere"></option>
+                    </datalist>
+                </div>
+                <div>
+                    <label for="date">What date do you want to meet?</label>
+                    <input type="date" name="date" id="date" required="true">
+                </div>
+                <div>
+                    <label for="time">What time do you want to meet?</label>
+                    <input type="time" name="time" id="time" required="true">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>How can we contact you?</legend>
+                <div>
+                    <label for="email">your email:</label>
+                    <input type="email" id="email" placeholder="ex:ali@gmail.com" required="true" autocomplete="email">
+                </div>
+                <div>
+                    <label for="phone">your phone number:</label>
+                    <input type="tel" id="phone" placeholder="ex: 0550403020" required="true" autocomplete="tel">
+                </div>
+                <div>
+                    <label for="contactChoice">What is your prefer contact way?</label>
+                </div>
+                <div>
+                    <label for="emailChoice">Email</label>
+                    <input type="radio" name="contactChoice" id="emailChoice">
+                </div>
+                <div>
+                    <label for="phoneChoice">Phone call</label>
+                    <input type="radio" name="contactChoice" id="phoneChoice">
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Submit the form</legend>
+                <div>
+                    <input type="submit" value="Submit" method="get">
+                </div>
+            </fieldset>
+        </form>
+    </main>
+    <!-- footer of the page -->
+    <footer>
+        <section>
+            <ul>
+                Contact Us
+                <li>Abdulrahman@gmail.com</li>
+                <li>+966510203040</li>
+                <li>KFUPM, Dhahran, Kingdom of Saudi Arabia</li>
+            </ul>
+        </section>
+        <section>
+            <div>
+                <a href="index.html">Main</a>
+            </div>
+            <div>
+                <a href="contact_us.html">Contact Us</a>
+            </div>
+            <div>
+                <a href="">Appointment</a>
+            </div>
+            <div>
+                <a href="../Exercises/Additional Pages/horses.html">Horses</a>
+            </div>
+        </section>
+        <section>
+            <p>made with &hearts; at KFUPM</p>
+            <p>copy right &copy; 2023</p>
+        </section>
+    </footer>
+</body>
+
+</html>
